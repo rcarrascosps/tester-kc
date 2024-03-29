@@ -5,18 +5,18 @@
   "time": "20 minutes",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
 	  "credits": "SPS - Rolando Carrasco. MuleSoft - Alex Martínez",
       "courseData": "background.sh",
       "code": "foreground.sh"   
     },
     "steps": [
       {
-		"title": "Environment setup"
+		"title": "Environment setup",
         "text": "step1.md"
       },
 	  {
-		"title": "Install and test the API Catalog CLI"
+		"title": "Install and test the API Catalog CLI",
         "text": "step2.md"
       }
     ]
