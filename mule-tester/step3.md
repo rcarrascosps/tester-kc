@@ -5,11 +5,11 @@ read information of your environment.
 
 Open the Anypoint Platform console and head into the Access Management menu option:
 
-![Access Management](/mule-tester/connApps.jpg)
+![Access Management](/mule-tester/assets/connApps.jpg)
 
 Then, click on the button labed as "Create App":
 
-![Create App Button](/rcarrascosps/tester-kc/mule-tester/createApp.jpg)
+![Create App Button](/rcarrascosps/tester-kc/mule-tester/assets/createApp.jpg)
 
 You will be taken to the following screen, give a name to your connected app and select the option shown in the following screen:
 
