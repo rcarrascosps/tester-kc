@@ -5,7 +5,7 @@ read information of your environment.
 
 Open the Anypoint Platform console and head into the Access Management menu option:
 
-![Access Management](/rcarrascosps/tester-kc/mule-tester/connApps.jpg)
+![Access Management](/mule-tester/connApps.jpg)
 
 Then, click on the button labed as "Create App":
 
