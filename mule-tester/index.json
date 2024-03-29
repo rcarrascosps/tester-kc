@@ -1,6 +1,6 @@
 {
-  "title": "Mule Tester",
-  "description": "Let users copy or exec code blocks",
+  "title": "Mule API Catalog",
+  "description": "Try MuleSoft API Catalog CLI to publish assets to MuleSoft Exchange",
   "details": {
     "intro": {
       "text": "intro.md"
