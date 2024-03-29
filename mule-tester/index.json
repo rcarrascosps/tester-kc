@@ -7,8 +7,7 @@
     "intro": {
       "text": "intro.md",
 	  "credits": "SPS - Rolando Carrasco. MuleSoft - Alex Martínez",
-      "background": "background.sh",
-      "foreground": "foreground.sh"   
+      "foreground": "background.sh"   
     },
     "steps": [
       {
