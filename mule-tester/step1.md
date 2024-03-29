@@ -1,28 +1,18 @@
 
-### Create a connected App with the right scopes
+### Install Node and NPM
 ```
-chmod 755 installNode.sh
-./installNode.sh`
+apt install curl -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+nvm alias default 20.12.0
 ```
 
-### Get your Organization ID
-`copying disabled`{{}}
+### Validate Node and NPM
+`node -v npm -v`
 
 ### Test the connected App
 `ls -lh`{{exec}}
-
-### Send Ctrl+c before execute
-Run a blocking command:
-`sleep 1d`{{exec}}
-
-End it and run another:
-`whoami`{{exec interrupt}}
-
-### Copy multiline code block
-```
-uname -r
-pwd
-```{{copy}}
 
 ### Execute multiline code block
 
@@ -30,14 +20,3 @@ pwd
 uname -r
 pwd
 ```{{exec}}
-
-
-### Execute multiline code block with Ctrl+c
-Run a blocking command:
-`sleep 1d`{{exec}}
-
-End it and run others:
-```
-uname -r
-whoami
-```{{exec interrupt}}
