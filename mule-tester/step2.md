@@ -1,11 +1,11 @@
 
-### Create a connected App with the right scopes
+### Single line code blocks can be copied by default
 `copy me`
 
-### Get your Organization ID
+### It can also be disabled
 `copying disabled`{{}}
 
-### Test the connected App
+### Execute a command per click
 `ls -lh`{{exec}}
 
 ### Send Ctrl+c before execute

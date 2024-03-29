@@ -1,13 +1,23 @@
 {
   "title": "Mule API Catalog",
   "description": "Try MuleSoft API Catalog CLI to publish assets to MuleSoft Exchange",
+  "difficulty": "beginner",
+  "time": "20 minutes",
   "details": {
     "intro": {
       "text": "intro.md"
+	  "credits": "SPS - Rolando Carrasco. MuleSoft - Alex Martínez",
+      "courseData": "background.sh",
+      "code": "foreground.sh"   
     },
     "steps": [
       {
+		"title": "Environment setup"
         "text": "step1.md"
+      },
+	  {
+		"title": "Install and test the API Catalog CLI"
+        "text": "step2.md"
       }
     ]
   },
