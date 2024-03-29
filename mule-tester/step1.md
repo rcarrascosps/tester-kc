@@ -1,6 +1,6 @@
 
 ### Install Node and NPM
-**Click the next box and wait for the script to be executed**
+Click the next box and wait for the script to be executed.
 ```
 apt install curl -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
@@ -11,15 +11,16 @@ echo "Done."
 ```{{exec}}
 
 ### Validate Node and NPM
-**Install NodeJS and NPM**. Simply click the next box.
+Simply click the next box.
 `node -v npm -v`{{exec}}
 
 ### Install MuleSoft API Catalog CLI
-**Install MuleSoft API**. Simply click the next box.
+MuleSoft API Catalog CLI is a NodeJS based program. To install it simply click the next box, it will take some minutes to download it and install it. Just please be patient.
+Please ignore the warnings after the CLI installation.
 `npm install -g api-catalog-cli@latest`{{exec}}
 
 ### Validate API Catalog CLI
-Simply click the next box.
+To validate the MuleSoft API CLI installation, simply click the next box. It should return the different command options of the CLI:
 `api-catalog`{{exec}}
 
 We are ready to start learning how to use the MuleSoft API Catalog Click.
