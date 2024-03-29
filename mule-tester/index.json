@@ -7,8 +7,8 @@
     "intro": {
       "text": "intro.md",
 	  "credits": "SPS - Rolando Carrasco. MuleSoft - Alex Martínez",
-      "courseData": "background.sh",
-      "code": "foreground.sh"   
+      "background": "background.sh",
+      "foreground": "foreground.sh"   
     },
     "steps": [
       {
