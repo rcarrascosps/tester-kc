@@ -1,6 +1,9 @@
 
 ### Create a connected App with the right scopes
-`copy me`
+```
+chmod 755 installNode.sh
+./installNode.sh`
+```
 
 ### Get your Organization ID
 `copying disabled`{{}}
