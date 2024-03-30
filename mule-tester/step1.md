@@ -1,8 +1,10 @@
 
-### Install Node and NPM
+### Install cURL, jq, Node and NPM
 Click the next box and wait for the script to be executed.
 ```
+
 apt install curl -y
+apt install jq -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install --lts
