@@ -66,13 +66,22 @@ Get back to the **Tab1** and execute the following command:
 
 That was a dry-run command and the out out is at the file **mycatdryrun.log**. Let's see its contents:
 
-`more mycatdryrun.log`
+`more mycatdryrun.log` {{exec}}
 
 Now let's perform the publishing of the API discovered by the API Catalog CLI into Exchange:
 
-`api-catalog publish-asset --host=anypoint.mulesoft.com -d catalog.yaml --organization=$orgId --bearer=$accessToken --dry-run --verbose`{{exec}}
+`api-catalog publish-asset --host=anypoint.mulesoft.com -d catalog.yaml --organization=$orgId --bearer=$accessToken --verbose`{{exec}}
 
+You should see an output like this:
 
+![API Catalog CLI](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/apiCatalogExec.jpg?raw=true)
 
+Now, let's head into MuleSoft Anypoint Exchange and look for an API by the name: Shipping API. Which is one of the APIs discovered by the API Catalog CLI:
+
+![Exchange](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/exchange1.jpg?raw=true)
+
+Click on it:
+
+![Exchange](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/exchange2.jpg?raw=true)
 
 
