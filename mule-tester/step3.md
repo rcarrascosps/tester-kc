@@ -50,7 +50,7 @@ The next step is a summary of the configuration of the connected app, just click
 
 Then you will be taken here, just click on the *Save* button:
 
-![Create App Button](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/createApp4.jpg?raw=true)
+![Create App Button](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/createApps4.jpg?raw=true)
 
 You will get back to the connected apps screen where you will see listed the newly create app:
 
