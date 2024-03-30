@@ -25,6 +25,10 @@
 	  {
 		"title": "Set your credentials and test the MuleSoft API Catalog CLI",
         "text": "step4.md"
+      },
+	  {
+		"title": "Test the connection with the MuleSoft API Catalog CLI",
+        "text": "step5.md"
       }
     ]
   },
