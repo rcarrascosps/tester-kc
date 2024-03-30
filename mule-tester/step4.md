@@ -17,12 +17,12 @@ read clientSecret
 
 
 
-### Create the base64 string
+### Create the auth string
 
-Now we need to create a base64 string from the concatenation of the client_id + ":" + the client_secret value, since we are going to use it to cURL the MuleSoft Anypoint Platform
+Now we need to create a string from the concatenation of the client_id + ":" + the client_secret value, since we are going to use it to cURL the MuleSoft Anypoint Platform
 Authentication API Endpoint to get an access token that the MuleSoft API Catalog CLI will use.
 
-`authString=$(echo -n $clientId":"$clientSecret | base64)`{{exec}}
+`authString=$(echo -n $clientId":"$clientSecret`{{exec}}
 
 To validate that the base64 was created, execute the following command:
 
