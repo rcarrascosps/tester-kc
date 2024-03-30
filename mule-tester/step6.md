@@ -66,7 +66,7 @@ Get back to the **Tab1** and execute the following command:
 
 That was a dry-run command and the out out is at the file **mycatdryrun.log**. Let's see its contents:
 
-`more mycatdryrun.log` {{exec}}
+`more mycatdryrun.log`{{exec}}
 
 Now let's perform the publishing of the API discovered by the API Catalog CLI into Exchange:
 
