@@ -8,7 +8,7 @@ With those credentials we will generate an access token using cURL:
 ```
 authRequest=$(curl --silent --location --request POST https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token --header 'Content-Type: application/x-www-form-urlencoded' -u ${authString} --data-urlencode 'grant_type=client_credentials' --data-urlencode 'scope=full')
 accessToken=$(jq -r '.access_token' <<< "$authRequest")
-echo $accesToken
+echo $accessToken
 ```{{exec}}
 
 
