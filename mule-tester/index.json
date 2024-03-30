@@ -21,6 +21,10 @@
 	  {
 		"title": "Create a connected App at MuleSoft Anypoint Platform",
         "text": "step3.md"
+      },
+	  {
+		"title": "Set your credentials and test the MuleSoft API Catalog CLI",
+        "text": "step4.md"
       }
     ]
   },
