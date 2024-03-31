@@ -82,6 +82,6 @@ Now, let's head into MuleSoft Anypoint Exchange and look for an API by the name:
 
 Click on it:
 
-![Exchange](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/exchange2.jpg?raw=true)
+![Exchange](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/exchange3.jpg?raw=true)
 
 
