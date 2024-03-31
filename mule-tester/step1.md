@@ -28,7 +28,7 @@ Please ignore the warnings after the CLI installation.
 
 `npm install -g api-catalog-cli@latest`{{exec}}
 
-**Do not proceed until the MuleSoft API Catalog CLI gets installed**
+**Do not proceed until the MuleSoft API Catalog CLI gets installed.**
 
 ### Validate API Catalog CLI
 
