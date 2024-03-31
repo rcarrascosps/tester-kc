@@ -23,7 +23,7 @@ Next, copy the Organization Id from the URL at the browser address:
 
 ![API Manager](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/apiMan2.jpg?raw=true)
 
-Paste it as the response from the next command:
+Paste it as the response from the next command (similar to what you've done with the client_id and client_secret):
 
 ```
 echo "Please enter your Organization id: "
