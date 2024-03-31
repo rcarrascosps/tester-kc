@@ -6,7 +6,7 @@ MuleSoft API Catalog CLI needs a descriptor file that gets generated with the fo
 
 In the project directory, you will see now a file named catalog.yaml. You can choose different name for your descriptor file using the -d <file name> flag
 
-You can see the descriptor file in the Killercode editor tab, click on the tab and look for the file at the directory: /root/api-catalog-cli/Follow Tutorial
+You can see the descriptor file in the Killercoda editor tab, click on the tab and look for the file at the directory: /root/api-catalog-cli/Follow Tutorial
 
 ![Editor](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/editor.jpg?raw=true)
 
