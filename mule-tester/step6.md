@@ -74,7 +74,7 @@ Now let's perform the publishing of the API discovered by the API Catalog CLI in
 
 You should see an output like this:
 
-![API Catalog CLI](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/apiCatalogExec.jpg?raw=true)
+![API Catalog CLI](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/apicatalogExec.jpg?raw=true)
 
 Now, let's head into MuleSoft Anypoint Exchange and look for an API by the name: Shipping API. Which is one of the APIs discovered by the API Catalog CLI:
 
