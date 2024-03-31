@@ -1,7 +1,7 @@
 
 ### Set your credentials
 
-Copy the value of the client_id. To do that, just click on the Copy Id button and paste it as the response of the following command.
+Copy the value of the client_id. To do that, just click on the Copy Id button and paste it as the response of the following command (the following animated GIF will show you how).
 
 ![Client ID](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/clientid.gif?raw=true)
 
