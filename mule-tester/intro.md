@@ -6,6 +6,8 @@ g { color: Green }
 
 <br>
 
+<span style="color: red;">text</span>.
+
 In this scenario we'll learn how to install and use MuleSoft API Catalog to import APIs and Assets to MuleSoft Anypoint Exchange.
 
 <r>**!!! IMPORTANT !!!**</r>
