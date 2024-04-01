@@ -3,7 +3,7 @@
 
 In this scenario we'll learn how to install and use MuleSoft API Catalog to import APIs and Assets to MuleSoft Anypoint Exchange.
 
-<span style="color:red">**!!! IMPORTANT !!!**</span>.
+<span style="color:red">!!! IMPORTANT !!!</span>
 
 
 **Do not proceed to the next step the systems gets udpdated and upgraded**. In the right window we are preparing that for you. In a few minutes you should see the next window apppear:
