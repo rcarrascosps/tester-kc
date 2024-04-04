@@ -18,7 +18,7 @@ You will be taken to the following screen, **give a name** to your connected app
 
 Then, click on the Add Scopes button:
 
-![Add Scopes](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/createApp3.jpg?raw=true)
+![Add Scopes](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/createApps3.jpg?raw=true)
 
 Now we will **select just the required scopes** to allow the MuleSoft API Catalog CLI to interact with Exchange and to read information about your environment.
 The first scope is the following. Please select it:
