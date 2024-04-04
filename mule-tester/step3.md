@@ -18,7 +18,7 @@ You will be taken to the following screen, **give a name** to your connected app
 
 Then, click on the Add Scopes button:
 
-![Add Scopes](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets//rcarrascosps/tester-kc/mule-tester/createApp3.jpg?raw=true)
+![Add Scopes](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/createApp3.jpg?raw=true)
 
 Now we will **select just the required scopes** to allow the MuleSoft API Catalog CLI to interact with Exchange and to read information about your environment.
 The first scope is the following. Please select it:
@@ -35,7 +35,7 @@ And **select** the View Environment Scope, like this:
 
 **Lastly**, click on the Next Button:
 
-![View Environment Scope](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/addScopes4.jpg=raw=true)
+![View Environment Scope](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/addScopes4.jpg?raw=true)
 
 Then **select the Business Group (BG)** that you want to connect to. In this example is *SP Solutions*. But in your case it should be other. And then click the next button:
 
