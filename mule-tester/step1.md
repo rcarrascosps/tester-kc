@@ -1,6 +1,7 @@
 
 ### Install cURL, jq, Node and NPM
-Click the next box and wait for the script to be executed.
+Click on the next box and wait for the script to be executed. After it gets executed Node and NPM will be installed.
+
 ```
 
 apt install curl -y
@@ -12,6 +13,8 @@ echo "Done."
 ```{{exec}}
 
 ### Install jq
+
+We need jq for some expressions we will use to **parse the JSON responses** of some of the APIs that are needed to setup our environment.
 
 `apt install jq -y`{{exec}}
 
@@ -28,9 +31,11 @@ Please ignore the warnings after the CLI installation.
 
 `npm install -g api-catalog-cli@latest`{{exec}}
 
-**Do not proceed until the MuleSoft API Catalog CLI gets installed.**
+**!!! Do not proceed until the MuleSoft API Catalog CLI gets installed. !!!**
 
 ### Validate API Catalog CLI
+
+Once the API Catalog CLI was installed we can proceed with the following steps.
 
 To validate the MuleSoft API CLI installation, simply click the next box. It should return the different command options of the CLI:
 

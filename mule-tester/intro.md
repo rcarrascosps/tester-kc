@@ -5,25 +5,27 @@ In this scenario we'll learn how to install and use MuleSoft API Catalog to impo
 **!!! IMPORTANT !!!**
 
 
-**Do not proceed to the next step until the system gets udpdated and upgraded**. In the right window we are preparing that for you. In a few minutes you should see the next window apppear:
+**Do not proceed to the next step until the system gets udpdated and upgraded**. In the right window we are preparing that for you. In a few minutes you should see in the next window the following:
 
 ![Ubuntu](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/intro.jpg?raw=true)
 
-**When that occurs choose the option that is displayed in the previous option, and hit the OK button. To hit the OK button, use the tab key.**
+**When that occurs choose the option that is displayed in the previous image and hit the OK button. To hit the OK button use the tab key of your keyboard.**
 **Once you hit the OK button the system will finalize its update and upgrade.**
 
 **You will notice** that the installation has finalized when you see the next information in the **right side of the window**:
 
 ![Ubuntu](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/mule-tester/assets/intro1.jpg?raw=true)
 
-The pre-requisites for this scenario are:
+**Once the update and upgrade of the system is ready you may proceed with the rest of the scenario. Please read the following prerequisites list.**
+
+The prerequisites for this scenario are:
 
 
--   **Anypoint Platform**  - You will need an Anypoint Platform account to catalog APIs to Anypoint Exchange. You can sign up for a free trial account  [here](https://anypoint.mulesoft.com/login/#/signup?apintent=generic).
+-   **Anypoint Platform**  - You will need a MuleSoft Anypoint Platform account to catalog APIs to Anypoint Exchange. You can sign up for a free trial account  [here](https://anypoint.mulesoft.com/login/#/signup?apintent=generic).
 -   **API Catalog CLI permissions**  - Enable the  **API Catalog Contributor**  permission in Anypoint Platform. You will perform it in the next steps.
--   **Acquire Organization ID**  - Log in to  [Anypoint Platform](https://anypoint.mulesoft.com/)  and go to API Manager. Click on the Environment Information button to retrieve your  **Business Group ID**  (or Organization ID).
+-   **Acquire Organization ID**  - We will do that during the next steps.
 -   **NodeJS**  and  **npm**  - This is going to be installed as part of the scenario.
--   **Code Editor**  - We will the use the Killercoda code editor
+-   **Code Editor**  - We will the use the Killercoda code editor.
 -   **Project files**  - We will use an existant Github repo. All credits to my friend Alex Martinez. Repo is [here https://github.com/mulesoft-developers/api-catalog-cli]. We will use that content to automate it and execute it here in Killercoda.
 
 
