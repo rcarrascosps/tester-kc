@@ -26,11 +26,32 @@ projects:
 
 ```
 
-The MuleSoft API Catalog discovered the API specs that were in that directory and with that it generated the descriptor file.
+As you can see the MuleSoft API Catalog CLI **discovered** what is in the directories which is the following:
+
+```
+drwxr-xr-x 4 root root  4096 Apr  4 22:28 .
+drwxr-xr-x 6 root root  4096 Apr  4 22:28 ..
+drwxr-xr-x 3 root root  4096 Apr  4 22:28 .github
+-rw-r--r-- 1 root root 35753 Apr  4 22:28 payments-oas.yaml
+drwxr-xr-x 2 root root  4096 Apr  4 22:28 shipping
+```
+
+The directory has one API spec (*OAS*) for the Payments API and then a second one inside the shipping directory:
+
+```
+drwxr-xr-x 2 root root 4096 Apr  4 22:28 .
+drwxr-xr-x 4 root root 4096 Apr  4 22:28 ..
+-rw-r--r-- 1 root root 1538 Apr  4 22:28 home.md
+-rw-r--r-- 1 root root 1561 Apr  4 22:28 shipping-api.yaml
+```
+
+The shipping directory contains the Shipping API spec and a markdown file with some information of it. The MuleSoft API Catalog CLI was able to detect all those elements.
+And with that, the CLI generated the descriptor file (**catalog.yaml**).
+
 
 ### Let's edit the descriptor file
 
-Copy the following text:
+Copy the following text by simply clicking on the next box:
 
 ```
 #%Catalog Descriptor 1.0
@@ -52,7 +73,7 @@ projects:
     documentation:
       Home: shipping/home.md
 
-```
+```{{copy}}
 
 Get back to the Editor Tab and replace the contents of the catalog.yaml file.
 
