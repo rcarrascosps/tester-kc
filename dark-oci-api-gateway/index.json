@@ -1,6 +1,6 @@
 {
   "title": "Dark OCI API Gateway",
-  "description": "Dark OCI API Gateway",
+  "description": "Create a Dark OCI API Gateway using OpenZiti.io",
   "difficulty": "intermediate",
   "time": "15 minutes",
   "details": {
