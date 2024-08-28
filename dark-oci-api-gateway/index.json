@@ -30,7 +30,7 @@
         },
     "finish": {
       "text": "finish.md",
-      "courseData": "teardown.sh"
+      "courseData": "background.sh"
     },
     "assets": {
       "client": [
