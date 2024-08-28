@@ -16,5 +16,5 @@ The fully prepared handson environment will live in a single compartment called 
 
 It is assumed that you do the handson scenarios as an administrator for the tenancy. This means that you do not need to create a user, groups nor policies.  
 
-![](assets/lab-compartment-layout.png)
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/intro.png?raw=true)
 

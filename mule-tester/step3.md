@@ -1,5 +1,5 @@
 
-### Create the Connected Apps
+### Create the Connected App
 
 We need to create a connected app that **allow us to connect and authenticate** to Anypoint Platform in order to allow the API Catalog CLI to push assets to Exchange and also 
 read information of your environment.
