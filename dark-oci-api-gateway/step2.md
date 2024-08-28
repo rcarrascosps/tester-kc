@@ -1,3 +1,40 @@
+### Install cURL, jq, Node and NPM
+Click on the next box and wait for the script to be executed. After it gets executed Node and NPM will be installed.
+
+```
+apt install curl -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+nvm alias default 20.12.1
+echo "Done."
+```{{exec}}
+
+### Install jq
+
+We need jq for some expressions we will use to **parse the JSON responses** of some of the APIs that are needed to setup our environment.
+
+`apt install jq -y`{{exec}}
+
+### Validate Node and NPM
+
+Simply click the next box.
+
+`node -v npm -v`{{exec}}
+
+### Install Terraform CLI
+
+Download Terraform Installer from GitHub https://github.com/robertpeteuil/terraform-installer
+`git clone https://github.com/robertpeteuil/terraform-installer`{{execute}}
+
+Execute the Terraform installer to install Terraform
+`./terraform-installer/terraform-install.sh`{{execute}}
+
+Test that Terraform was properly installed
+
+`terraform version`{{execute}}
+
+
 # Prepare OCI Tenancy for the REAL OCI Katacoda Scenarios
 
 This and the next preparatory steps can (only) be performed by the user who is the tenancy owner or by another user who is member of Administrators Group. In this step, you will create a config file and a public/private key pair - required by the OCI CLI tool that you will be using in the other scenarios. You will use the Cloud Shell tool to get easy command line access to a number of tenancy specific values that are need for the config and private key files.
@@ -124,32 +161,3 @@ export REGION_KEY=$(oci iam region-subscription list | jq -r '.data[0]."region-k
 
 Note: the following syntax will be used to use the lowercase value for region:
 `echo ${REGION,,}`{{execute}}
-
-## Auth Token for OCIR (Container Registry)
-
-For working with Functions, you need an auth token for working with the OCI Container Registry. The next script generates such a token for the tenancy owner (the oldest user in the tenancy). Please record this token for use in the scenarios that work with functions. Note: you can find these tokens in the console as well: https://console.us-ashburn-1.oraclecloud.com/identity/users/<user-ocid>/swift-credentials. 
-![](assets/auth-tokens.png)
-
-Execute this command to generate the Auth Token
-
-```
-USER_OCID=$(oci iam user list --all | jq -r  '.data |sort_by(."time-created")| .[0]."id"')
-authTokenJS=$(oci iam auth-token create --description "Token for logging in into Docker/OCIR" --user-id $USER_OCID)
-echo $authTokenJS
-authToken=$(echo $authTokenJS | jq --raw-output .data.token)
-echo "Token for logging in into Container Registry $authToken"
-NAMESPACE=$(oci os ns get| jq -r  '.data')
-USER_USERNAME=$(oci iam user list --all | jq -r  '.data |sort_by(."time-created")| .[0]."name"')
-echo "Username for logging in into Container Registry is $NAMESPACE/$USER_USERNAME"
-```{{execute}}
-
-Note: Record the Auth Token and the Username for logging in into the Container Registry for future use.
-
-
-## Create Local Copies of Files config and oci-api-key.pem
-You will need *config* and *oci-api-key.pem* files in almost every REAL Katacoda OCI scenario. You will be copying and pasting the contents of these files in each scenario. Therefore, now is a good time to prepare copies of these files, locally on your laptop. Note that the Katacoda environment is ephemeral: in less than 50 minutes, it will vanish.
-
-Open file *~/.oci/config* in the text editor, copy the contents and paste it to a local file on your laptop's file system. Make sure you will be able to find this file for the subsequent Katacoda scenarios.
-
-In the same vein, Open file *~/.oci/oci-api-key.pem* in the text editor, copy the contents and paste it to a local file on your laptop's file system. Make sure you will be able to find this file too for the subsequent Katacoda scenarios. Note: do not share this file with anyone: it contains the private key to your tenancy.
-
