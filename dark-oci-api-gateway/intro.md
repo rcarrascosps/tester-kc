@@ -16,7 +16,10 @@ The fully prepared handson environment will live in a single compartment called 
 * a Compute Instance running an Edge Router from NetFoundry
 
 
-It is assumed that you do the handson scenarios as an administrator for the tenancy. This means that you do not need to create a user, groups nor policies.  
+It is assumed that you do the scenario as an administrator for the tenancy. This means that you do not need to create a user, groups nor policies.  
 
+**Do not proceed until you see the next information at the right window:**
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/doNotProceed.png?raw=true)
 
 
