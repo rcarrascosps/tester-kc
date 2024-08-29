@@ -1,10 +1,17 @@
 ### Install cURL, jq, Node and NPM
-Click on the next box and wait for the script to be executed. After it gets executed Node and NPM will be installed.
+Click on the next box and wacURL it for the script to be executed. After it gets executed Node and NPM will be installed.
+
+cURL installation:
 
 ```
 apt install curl -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
+```{{exec}}
+
+NPM and Node installation:
+
+```
 nvm install --lts
 nvm alias default 20.17.0
 echo "Done."
@@ -33,3 +40,9 @@ Execute the Terraform installer to install Terraform
 Test that Terraform was properly installed
 
 `terraform version`{{execute}}
+
+### PIP update
+
+Let's update pip:
+
+`/root/lib/oracle-cli/bin/python -m pip install --upgrade pip`{{execute}}

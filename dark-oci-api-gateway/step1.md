@@ -11,9 +11,10 @@ You will need the following:
 * a credit card (the trial really is free, but you need to record payment details all the same)
 
 Then goto https://www.oracle.com/cloud/free/ and click on *Start for free* to sign up for a free trial.
-![](free-trial.png)
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/free-trial.png?raw=true)
 
 You will define a cloudaccount (name of the tenancy), your username and a password. You also need to select a Region; this could be one close to you (for lowest network latency) or one that has the services available you want to look at. For the workshop scenarios on Killercoda, the safest bet is to go with region Ashburn (US East). 
 
 Once you have acquired the cloud trial and the tenancy has been provisioned, you will receive an email, inviting you to sign in to your account, change your temporary password and then you can continue with the next steps in this scenario. 
-![](cloud-trial-get-started-email.png)
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/cloud-trial-get-started-email.png?raw=true)
+
