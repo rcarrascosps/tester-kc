@@ -29,7 +29,7 @@ This step in the scenario will help you prepare these files and to add the publi
 Login to the OCI Cloud Console as the tenancy owner (or a user who is administrator). 
 
 Open the OCI Cloud Shell tool, from the OCI Cloud Console.
-![](assets/cloud-shell.png)
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/cloud-shell.png?raw=true)
 
 Note: For clipboard operations, Windows users can use Ctrl-C or Ctrl-Insert to copy, and Shift-Insert to paste. For Mac OS users, use Cmd-C to copy and Cmd-V to paste.
 
@@ -68,8 +68,8 @@ export KEY_FINGERPRINT=$(oci iam user api-key list --user-id  $USER_OCID  | jq -
 </pre>
 
 
-## Edit Config and Private Key File in Katacoda
-You will now use the results of the actions in Cloud Shell for completing the configuration and private key file in Katacoda.
+## Edit Config and Private Key File in Killercoda
+You will now use the results of the actions in Cloud Shell for completing the configuration and private key file in Killercoda.
 
 ### Config File
 In Cloud Shell, execute this command, to get the contents for the config file:
@@ -86,9 +86,9 @@ echo "$__config"
 </pre>
 
 Select the output from this command in Cloud Shell and copy it to the clipboard (through right mouse menu or using Ctrl-C or Ctrl-Insert in Windows and Cmd-C on Mac OS).
-![](assets/copy-config-file-values.png)
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/copy-config-file-values.png?raw=true)
 
-Back in the Katacoda scenario: open file *~/.oci/config* in the text editor, and paste the contents from the clipboard into the file.
+Back in the Killercoda scenario: open file *~/.oci/config* in the text editor, and paste the contents from the clipboard into the file.
 
 ### Private Key File
 In Cloud Shell, execute this command to list the contents of the private key and copy the contents to the clipboard. 
@@ -97,11 +97,11 @@ In Cloud Shell, execute this command to list the contents of the private key and
 cat ~/oci-keys/oci_api_key.pem
 </pre>
 
-Note: this is the private key that no one but you should have access to. We only need to show the contents so you can copy it to the clipboard and paste into a file in the Katacoda scenario.
-![](assets/copy-private-key.png)
+Note: this is the private key that no one but you should have access to. We only need to show the contents so you can copy it to the clipboard and paste into a file in the Killercoda scenario.
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/copy-private-key.png?raw=true)
 
-Back in the Katacoda scenario: open file *~/.oci/oci-api-key.pem* in the text editor, and paste the contents from the clipboard into the file.
-![](assets/paste-private-key-to-katacoda.png)
+Back in the Killercoda scenario: open file *~/.oci/oci-api-key.pem* in the text editor, and paste the contents from the clipboard into the file.
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/paste-private-key-to-Killercoda.png?raw=true)
 
 ## Try out the OCI CLI connection to your Tenancy
 To make sure that the *config* file and the *oci-api-key.pem* file have the correct contents, try out the following command to get a list of all namespaces you currently have access to - based on the OCI Configuration defined above.
@@ -114,7 +114,7 @@ Another test - listing all users in your OCI tenancy:
 
 `oci iam user list --all`{{execute}}
 
-Set environment variables in the Katacoda environment with the Tenancy OCID, the region name and the region key:
+Set environment variables in the Killercoda environment with the Tenancy OCID, the region name and the region key:
 
 ```
 export TENANCY_OCID=$(oci iam user list --all | jq -r  '.data[0]."compartment-id"')
