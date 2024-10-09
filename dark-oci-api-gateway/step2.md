@@ -1,5 +1,5 @@
 ### Install cURL, jq, Node and NPM
-Click on the next box and wacURL it for the script to be executed. After it gets executed Node and NPM will be installed.
+Click on the next box and wait for the script to be executed. After it gets executed Node and NPM will be installed.
 
 cURL installation:
 

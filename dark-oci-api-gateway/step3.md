@@ -101,7 +101,7 @@ Note: this is the private key that no one but you should have access to. We only
 ![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/copy-private-key.png?raw=true)
 
 Back in the Killercoda scenario: open file *~/.oci/oci-api-key.pem* in the text editor, and paste the contents from the clipboard into the file.
-![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/paste-private-key-to-Killercoda.png?raw=true)
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/paste-private-key-to-Katacoda.png?raw=true)
 
 ## Try out the OCI CLI connection to your Tenancy
 To make sure that the *config* file and the *oci-api-key.pem* file have the correct contents, try out the following command to get a list of all namespaces you currently have access to - based on the OCI Configuration defined above.

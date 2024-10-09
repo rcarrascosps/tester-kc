@@ -1,28 +1,50 @@
-# Create Policies to allow access on Lab Compartment 
+## Create OCI Compartment where we will deploy the OCI API Gateway, Edge Router and the rest of the infra
 
-Policies in OCI are used to define permissions - rules about accessing resources or capabilities. In this step, you will create a few policies that allow the Functions service to access repositories and to use the Virtual Cloud Network in the *lab-compartment*. An additional policy is created to provide necessary access privileges to dynamic group *lab-apigw-dynamic-group* (and indirectly to the API Gateway); this access is limited to *lab-compartment* (the functions and virtual network in the compartment)
+`export darkCompartmentId=$(oci iam compartment create --name "darkCompartment" --compartment-id $TENANCY_OCID --description "my compartment" | jq -r .data.id)`{{execute}}
 
-## Policies to enable the Functions Services 
+We've created a compartment with the name darkCompartment which will contain all the elements that we will create in the following steps:
 
-Run this command to create two policies for the Functions service with regard to the Lab Compartments network and the Function Repos in the OCI container registry
+* VCN
+* OCI API Gateway
+* NetFoundry Edge Router
+
+## Create VCN and Private Subnet 
+
+We'll create the network resources using Terraform, all the resources: VCN, Subnet, Security Lists, NAT Gateway, Route Tables, etc., will be created with it.
+Let's first clone the repository of the Terraform Plans
+
+`git clone`{{execute}}
+
+Let's set the required variables to execute our terraform plan:
+
 ```
-echo creating policy lab-faas-use-network-family
-oci iam policy create  --name lab-faas-use-network-family --compartment-id $TENANCY_OCID  --statements "[ \"Allow service FaaS to use virtual-network-family in compartment lab-compartment\"]"  --description "Create a Policy to Give the Oracle Functions Service Access to Network Resources"
+export TF_VAR_compartment_ocid=$darkCompartmentId
+export TF_VAR_vcn_name=demoDarkVCN
+```
 
-echo creating policy lab-faas-read-repos
-oci iam policy create  --name lab-faas-read-repos --compartment-id $TENANCY_OCID  --statements "[ \"Allow service FaaS to read repos in tenancy\"]"  --description "Create a Policy to Give the Oracle Functions Service Access to Repositories in Oracle Cloud Infrastructure Registry"
+Now let's apply the plan (it will take around 30 seconds to be executed):
+
+```
+cd <Directory>
+
+terraform init -upgrade
+terraform apply -auto-approve
+
+```{{execute}}
+
+Now that we've created the VCN and the subnet, let's set some environment variables:
+
+```
+vcns=$(oci network vcn list  --compartment-id $TF_VAR_compartment_ocid --all)
+export vcnId=$(echo $vcns | jq -r --arg display_name "demoDarkVCN" '.data | map(select(."display-name" == $display_name)) | .[0] | .id')
+echo $vcnId
+subnets=$(oci network subnet list  -c $TF_VAR_compartment_ocid --vcn-id $vcnId)
+export TF_VAR_subnet_ocid=$(echo $subnets | jq -r --arg display_name "private subnet-demoDarkVCN" '.data | map(select(."display-name" == $display_name)) | .[0] | .id')
+echo $TF_VAR_subnet_ocid
 ```{{execute}}
 
 
-## Policies to enable API Gateway
+What we have created is a fully private VCN with one subnet. The only communication that this subnet could receive is from within its own CIDR block. Which is
+exactly what we need. On top of it we will deploy the OCI API Gateway and make it Dark. 
 
-The next policy provides necessary access privileges to dynamic group *lab-apigw-dynamic-group* (and indirectly to the API Gateway dynamically included in that group). This access is limited to *lab-compartment* (the functions and virtual network in the compartment).
-
-```
-oci iam policy create  --name "dyn-group-gateway-access-lab-compartment" --compartment-id $compartmentId  --statements "[ \"allow dynamic-group lab-apigw-dynamic-group to use virtual-network-family in compartment lab-compartment\",\"allow dynamic-group lab-apigw-dynamic-group to manage public-ips in compartment lab-compartment\",\"allow dynamic-group lab-apigw-dynamic-group to use functions-family in compartment lab-compartment\"]" --description "to allow lab apigw dynamic group access to lab-compartment"
-```{{execute}}
-
-## Policies to manage OKE
-
-
-
+In the next steps you'll create all the NetFoundry resources.
