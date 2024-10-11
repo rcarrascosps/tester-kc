@@ -54,11 +54,6 @@ First we need to set some variables:
 ```
 export nfCredentials=$(echo -n $clientId":"$clientSecret)
 export nfSvc="ociAPIGtwySvc"
-export clientIngressHost="mdsv5rqni2atlcnytbltwcyezm.apigateway.us-ashburn-1.oci.customer-oci.com"
-export clientIngressPort=443
-export clientEgressHost="mdsv5rqni2atlcnytbltwcyezm.apigateway.us-ashburn-1.oci.customer-oci.com"
-export clientEgressPort=443
-
 export nfIdentityName="killerCoda"
 ```{{execute}}
 
