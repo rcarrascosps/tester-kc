@@ -19,27 +19,27 @@
       },
       {
         "title": "Step 4 - Create OCI Resources (Compartment, VCN, API Gateway, Stream)",
-        "text": "step3.md"
-      },
-      {
-        "title": "Step 5 - Create Policies",
         "text": "step4.md"
       },
       {
-        "title": "Step 6 - Create Policies",
-        "text": "step4.md"
+        "title": "Step 5 - Create NetFoundry requirements",
+        "text": "step5.md"
       },
       {
-        "title": "Step 7 - Create Policies",
-        "text": "step4.md"
+        "title": "Step 6 - Create Edge Router in OCI",
+        "text": "step6.md"
       },
       {
-        "title": "Step 8 - Create Policies",
-        "text": "step4.md"
+        "title": "Step 7 - Create an OCI API Gateway",
+        "text": "step7.md"
       },
       {
-        "title": "Step 9 - Create Policies",
-        "text": "step4.md"
+        "title": "Step 8 - Create a Service in NetFoundry",
+        "text": "step8.md"
+      },
+      {
+        "title": "Step 9 - Call the Dark API",
+        "text": "step9.md"
       }
     ],
     "intro": {
