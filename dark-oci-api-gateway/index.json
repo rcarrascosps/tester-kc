@@ -10,11 +10,11 @@
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Pre-requisites installations",
+        "title": "Step 2 - Install pre-requisites. Clone github repo.",
         "text": "step2.md"
       },
 	  {
-        "title": "Step 3 - Key Pair/Config Files",
+        "title": "Step 3 - Prepare OCI Tenancy",
         "text": "step3.md"
       },
       {
@@ -22,7 +22,23 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Create Policies",
+        "title": "Step 5 - Create Policies",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 6 - Create Policies",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 7 - Create Policies",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 8 - Create Policies",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 9 - Create Policies",
         "text": "step4.md"
       }
     ],

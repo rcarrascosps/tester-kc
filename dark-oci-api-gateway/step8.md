@@ -4,9 +4,9 @@ First we need to set some variables:
 
 ```
 export nfSvc="ociAPIGtwySvc"
-export clientIngressHost="mdsv5rqni2atlcnytbltwcyezm.apigateway.us-ashburn-1.oci.customer-oci.com"
+export clientIngressHost=$gateway_host
 export clientIngressPort=443
-export clientEgressHost="mdsv5rqni2atlcnytbltwcyezm.apigateway.us-ashburn-1.oci.customer-oci.com"
+export clientEgressHost="$gateway_host
 export clientEgressPort=443
 export nfIdentityName="killerCoda"
 ```{{execute}}

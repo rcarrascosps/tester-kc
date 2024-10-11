@@ -1,6 +1,6 @@
 # Free Oracle Cloud Trial or existing regular OCI Tenancy 
 
-The Killercoda workshop scenarios on OCI require an OCI environment to be prepared. This environment is set up in an OCI Tenancy. This can be an existing, paid for OCI Tenancy, or a Tenancy created as a Free Trial.
+The Killercoda workshop scenarios on OCI require an OCI environment to be prepared. This environment is set up in an OCI Tenancy. This can be an existing, paid OCI Tenancy, or a Tenancy created as a Free Trial.
 
 If you have an OCI tenancy at your disposal, please go the next step in this scenario. However, if you do not currently have access to an OCI Tenancy, you can have an environment provisioned for you as part of a 30-day free trial. 
 
@@ -8,7 +8,7 @@ You will need the following:
 
 * an email address
 * a mobile phone to receive a confirmation code per SMS
-* a credit card (the trial really is free, but you need to record payment details all the same)
+* a credit card (the trial really is free, but you need to record payment details)
 
 Then goto https://www.oracle.com/cloud/free/ and click on *Start for free* to sign up for a free trial.
 ![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/free-trial.png?raw=true)

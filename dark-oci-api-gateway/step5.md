@@ -1,18 +1,59 @@
 ## Let's create the credentials in NetFoundry to managed resources using their APIs
 
-TODO
+Go to your NetFoundry console, and head to the Organization section (right side of the window):
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netorg.png?raw=true)
+
+Then click on the API Accounts:
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netAPIAcc.png?raw=true)
+
+Finally click on the blue cross button:
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netCreateAPI.png?raw=true)
+
+Fill the blanks with the following info:
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netCreateAPI2.png?raw=true)
+
+Copy the client_ID, and paste it in the next step:
+
+```
+echo "Please enter the client_id from the Copy Id button: "
+read clientId 
+```{{exec}}
+
+Copy the client_secret, and paste it in the next step:
+
+```
+echo "Please enter the client_secret from the Copy Secret button: "
+read clientSecret 
+```{{exec}}
+
+Copy the URL, and paste it in the next step:
+
+```
+echo "Please enter the URL from the Copy URL: "
+read nfOAuthURL 
+```{{exec}}
+
+Then let's assign roles to our API account. Click on the three dots:
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netCreateAPI4.png?raw=true)
+
+
+Then assign the following roles:
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/assignRoles.png?raw=true)
+
 
 ## Let's create the Edge Router in NetFoundry
 
 First we need to set some variables:
 
 ```
-export nfOAuthURL="https://netfoundry-production-xfjiye.auth.us-east-1.amazoncognito.com/oauth2/token"
-export nfCredentials="NXQaTFyY24wczRrZWc2Z2tqNWtrcTM6Y240NWtmZm9lcXIxMjJzcGJ1amx1NnJ"
-
-export nfNetworkID=""
+export nfCredentials=$(echo -n $clientId":"$clientSecret)
 export nfSvc="ociAPIGtwySvc"
-
 export clientIngressHost="mdsv5rqni2atlcnytbltwcyezm.apigateway.us-ashburn-1.oci.customer-oci.com"
 export clientIngressPort=443
 export clientEgressHost="mdsv5rqni2atlcnytbltwcyezm.apigateway.us-ashburn-1.oci.customer-oci.com"

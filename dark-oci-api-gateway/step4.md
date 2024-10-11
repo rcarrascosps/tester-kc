@@ -1,8 +1,10 @@
 ## Create OCI Compartment where we will deploy the OCI API Gateway, Edge Router and the rest of the infra
 
+With the OCI CLI ready to execute commands to our tenant, we can proceed to create the compartment:
+
 `export darkCompartmentId=$(oci iam compartment create --name "darkCompartment" --compartment-id $TENANCY_OCID --description "my compartment" | jq -r .data.id)`{{execute}}
 
-We've created a compartment with the name darkCompartment which will contain all the elements that we will create in the following steps:
+We've created a compartment with the name **darkCompartment** which will contain all the elements that we will create in the following order:
 
 * VCN
 * OCI API Gateway
@@ -10,8 +12,8 @@ We've created a compartment with the name darkCompartment which will contain all
 
 ## Create VCN and Private Subnet 
 
-We'll create the network resources using Terraform, all the resources: VCN, Subnet, Security Lists, NAT Gateway, Route Tables, etc., will be created with it.
-Let's first clone the repository of the Terraform Plans
+We'll create the network resources using Terraform, all the resources: VCN, Subnet, Security Lists, NAT Gateway, Route Tables, etc, will be created with it.
+Let's first clone the repository of the Terraform Plans:
 
 `git clone`{{execute}}
 
@@ -44,7 +46,6 @@ echo $TF_VAR_subnet_ocid
 ```{{execute}}
 
 
-What we have created is a fully private VCN with one subnet. The only communication that this subnet could receive is from within its own CIDR block. Which is
-exactly what we need. On top of it we will deploy the OCI API Gateway and make it Dark. 
+What we have created is a fully private VCN with one subnet. The only communication that this subnet could receive is from within its own CIDR block. Which is exactly what we need. On top of it we will deploy the OCI API Gateway and make it Dark. 
 
 In the next steps you'll create all the NetFoundry resources.

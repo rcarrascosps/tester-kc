@@ -8,14 +8,15 @@ First we need to set some variables:
 
 ```
 export endpoint_type=PRIVATE
-export subnet_id=ocid1.subnet.oc1.iad.aaaaaaaa36o2m3lrtwyw4vtyg6ky43wnwuuobnvskpo7dqnolk3gyn4fn5pa
+export subnet_id=$TF_VAR_subnet_ocid
 export display_name=darkGtwy
 ```{{execute}}
 
 With the required variables we can proceed to create the OCI API Gateway:
 
-`oci api-gateway gateway create --compartment-id $compartment_id --endpoint-type $endpoint_type --subnet-id $subnet_id --display-name $display_name`{{execute}}
-
+```
+gateway_id=$(oci api-gateway gateway create --compartment-id $darkCompartmentId --endpoint-type $endpoint_type --subnet-id $subnet_id --query data.id --raw-output)
+```{{execute}}
 
 ## Create a deployment
 
@@ -24,16 +25,14 @@ Now with the OCI API Gateway created we can proceed to generate a deployment tha
 We need first to set some environment variables:
 
 ```
-export compartment_id=ocid1.compartment.oc1..aaaaaaaanm4vbhohvgtv4dlp6peonspve3xalvqtadubivwdrwstsf7zanwa
 export endpoint_type=PRIVATE
-export subnet_id=ocid1.subnet.oc1.iad.aaaaaaaa36o2m3lrtwyw4vtyg6ky43wnwuuobnvskpo7dqnolk3gyn4fn5pa
 export path_prefix="/api"
-gateway_id=$(oci api-gateway gateway create --compartment-id $compartment_id --endpoint-type $endpoint_type --subnet-id $subnet_id --query data.id --raw-output)
+
 ```{{execute}}
 
 And now we can create the deployment:
 
-`oci api-gateway deployment create --compartment-id $compartment_id --gateway-id $gateway_id --path-prefix $path_prefix --specification file://specification.json`{{execute}}
+`oci api-gateway deployment create --compartment-id $darkCompartmentId --gateway-id $gateway_id --path-prefix $path_prefix --specification file://specification.json`{{execute}}
 
 While the deploymet is getting created (it may take about a minute) let's take a look to the specification.json file we used to create it:
 
@@ -62,10 +61,20 @@ a fixed message like this:
 	"message": "Response from a Dark Gateway"
 }
 ```
+Now let's get the hostname where the OCI API Gateway will be serving requests:
 
-That API resource will be serving at: https://gatewayHostname/api/stock
+```
+gateway_host=$(oci api-gateway gateway get --gateway-id $gateway_id --query data.hostname --raw-output)
+echo $gateway_host
+```{{execute}}
 
-From this killercoda terminal we cannot access it, since the API Gateway is completely private.
+That API resource will be serving at: https://$gateway_host/api/stock
+
+From this Killercoda terminal we cannot access it, since the API Gateway is completely private. Try it out:
+
+`curl -X GT https://$gateway_host/api/stock`{{execute}}
+
+As you can see we cannot access it.
 
 In the next step you will learn how to create a Service, and Identity and an AppWAN in NetFoundry. That is needed to create the Dark API and then we will
 be in position to consume the service within the Killercoda terminal.
