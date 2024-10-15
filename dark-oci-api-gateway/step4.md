@@ -15,7 +15,7 @@ We've created a compartment with the name **darkCompartment** which will contain
 We'll create the network resources using Terraform, all its resources like: VCN, Subnet, Security Lists, NAT Gateway, Route Tables, etc, will be provisioned with it.
 Let's first clone the repository of the Terraform Plans:
 
-`git clone`{{execute}}
+`git clone https://github.com/rcarrascosps/darkociapigtwy.git`{{execute}}
 
 Let's set the required variables to execute our terraform plan:
 
