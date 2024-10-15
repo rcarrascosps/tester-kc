@@ -16,6 +16,10 @@ Fill the blanks with the following info:
 
 ![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netCreateAPI2.png?raw=true)
 
+Once created, copy the respective values (use the respective blue buttons to copy the different values):
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netCopyValues2.png?raw=true)
+
 Copy the client_ID, and paste it in the next step:
 
 ```
@@ -36,6 +40,10 @@ Copy the URL, and paste it in the next step:
 echo "Please enter the URL from the Copy URL: "
 read nfOAuthURL 
 ```{{exec}}
+
+Then click on the "OK, ALL SET" button:
+
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/okAllSet.png?raw=true)
 
 Then let's assign roles to our API account. Click on the three dots:
 

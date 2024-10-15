@@ -1,8 +1,10 @@
 ## Create an OCI API Gateway
 
-We are going to create the OCI API Gateway using the OCI CLI.
+Let's move to the working directory for the OCI API Gateway:
 
-`cd Directory`{{execute}}
+`cd ../etc/deployment`{{execite}}
+
+We are going to create the OCI API Gateway using the OCI CLI.
 
 First we need to set some variables:
 
@@ -27,7 +29,6 @@ We need first to set some environment variables:
 ```
 export endpoint_type=PRIVATE
 export path_prefix="/api"
-
 ```{{execute}}
 
 And now we can create the deployment:

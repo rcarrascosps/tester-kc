@@ -1,6 +1,6 @@
 # Install cURL, jq, Node and NPM
 
-Before we setup our tenant, we need to install a set of tools in our KillerCoda terminal, let's do it.
+Before we setup all the elements we need to install a set of tools in our KillerCoda terminal.
 
 Click on the next box and wait for the script to be executed. After it gets executed Node and NPM will be installed.
 

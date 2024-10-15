@@ -1,10 +1,10 @@
 ## Move to the directory that holds the Terraform plan to deploy the Edge Router
 
-`cd Directory`{{execute}}
+`cd ../darkER`{{execute}}
 
 We need to copy the public key to the user directory. 
 
-`cp ./keys/id_rsa.pub ~/.ssh/`{{execute}}
+`cp ../etc/keys/id_rsa.pub ~/.ssh/`{{execute}}
 
 
 ## Let's deploy an Edge Router in OCI

@@ -40,7 +40,7 @@ You can check it with:
 
 Now we'll enroll our identity with the following command:
 
-`ziti.exe edge enroll --jwt killercoda.jwt --out killercoda.json`{{execute}}
+`ziti edge enroll --jwt killercoda.jwt --out killercoda.json`{{execute}}
 
 The SDK is going to use the json file generated in the previous step.
 

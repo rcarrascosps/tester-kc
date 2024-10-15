@@ -1,7 +1,7 @@
-This scenario will guide you in deploying a Dark OCI API Gateway in very few steps using OpenZitio.io.
+This scenario will guide you on deploying a Dark OCI API Gateway in very few steps using OpenZitio.io.
 The scenario not only that will deploy the whole infrastructure to make this happen, but will also provide a Node.js REST client to consume a Dark API.
 
-It considers to deploy an OCI API Gateway completely private (OCI private subnet) with no open ports for inbound traffic, but still from the Node.js client running in the killercoda terminal, you'll be able to call/connect the REST API deployed on OCI API Gateway.
+It considers to deploy an OCI API Gateway completely private (OCI private subnet) with no open ports for inbound traffic, but still from a Node.js client running in the killercoda terminal, you'll be able to call/connect the REST API deployed on OCI API Gateway.
 
 ![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/intro.png?raw=true)
 
