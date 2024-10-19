@@ -6,9 +6,9 @@ First we need to set some variables:
 export nfSvc="ociAPIGtwySvc"
 export clientIngressHost=$gateway_host
 export clientIngressPort=443
-export clientEgressHost="$gateway_host
+export clientEgressHost=$gateway_host
 export clientEgressPort=443
-export nfIdentityName="killerCoda"
+export nfIdentityName=killerCoda"
 ```{{execute}}
 
 Now with the required variables, let's create the Service.
@@ -32,7 +32,7 @@ echo $nfIdentityID
 
 The Identity is in JWT format, and we need to retrieve it with the following command
 
-`curl -X GET https://gateway.production.netfoundry.io/core/v2/endpoints/${nfIdentityID} --header "Authorization: Bearer ${access_tokenNF}" | jq -r '.jwt' > killercoda2.jwt`{{execute}}
+`curl -X GET https://gateway.production.netfoundry.io/core/v2/endpoints/${nfIdentityID} --header "Authorization: Bearer ${access_tokenNF}" | jq -r '.jwt' > killercoda.jwt`{{execute}}
 
 You can check it with:
 

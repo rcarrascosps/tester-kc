@@ -61,6 +61,7 @@ First we need to set some variables:
 
 ```
 export nfCredentials=$(echo -n $clientId":"$clientSecret)
+nfCredentials=$(echo -n $nfCredentials | base64)
 export nfSvc="ociAPIGtwySvc"
 export nfIdentityName="killerCoda"
 ```{{execute}}

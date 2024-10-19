@@ -18,6 +18,8 @@ With the required variables we can proceed to create the OCI API Gateway:
 
 ```
 gateway_id=$(oci api-gateway gateway create --compartment-id $darkCompartmentId --endpoint-type $endpoint_type --subnet-id $subnet_id --query data.id --raw-output)
+sleep 40
+echo $gateway_id
 ```{{execute}}
 
 ## Create a deployment

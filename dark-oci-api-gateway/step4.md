@@ -27,7 +27,7 @@ export TF_VAR_vcn_name=demoDarkVCN
 Now let's apply the plan (it will take around 30 seconds to be executed):
 
 ```
-cd ./darkOCIAPIGateway/darkVCN
+cd ./darkociapigtwy/darkVCN
 terraform init -upgrade
 terraform apply -auto-approve
 ```{{execute}}

@@ -13,12 +13,14 @@ First we need to set the user data that needs the compute instance to start the 
 
 ```
 H='#!/bin/bash'; C="sudo /opt/netfoundry/router-registration "; userdata="${H}"$'\n'"${C}""${edgeRouterRegKey}"; echo "${userdata}"
+userdata=$(echo $userdata | base64)
+echo $userdata
 ```{{execute}}
+
 
 Now with the required variables, let's deploy the Edge Router.
 
 ```
-cd Directory for Terraform plan
 terraform init -upgrade
 terraform apply -auto-approve
 ```{{execute}}
