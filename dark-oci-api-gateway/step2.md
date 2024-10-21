@@ -47,3 +47,9 @@ Test that Terraform was properly installed
 Let's update pip:
 
 `/root/lib/oracle-cli/bin/python -m pip install --upgrade pip`{{execute}}
+
+## Install unzip
+
+unzip installation:
+
+`apt install unzip -y`{{exec}}

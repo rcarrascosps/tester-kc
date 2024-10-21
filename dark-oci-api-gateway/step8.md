@@ -40,7 +40,12 @@ You can check it with:
 
 Now we'll enroll our identity with the following command:
 
-`ziti edge enroll --jwt killercoda.jwt --out killercoda.json`{{execute}}
+```
+cp killercoda.jwt ../sw
+unzip ziti.zip .
+chmod 755 ziti
+./ziti edge enroll --jwt killercoda.jwt --out killercoda.json
+```{{execute}}
 
 The SDK is going to use the json file generated in the previous step.
 
@@ -48,7 +53,7 @@ The SDK is going to use the json file generated in the previous step.
 
 Now is time to create an AppWAN. With it we are generating a relationship between the Service and the Identity. As a result, the identity now has access to the Service.
 
-`curl -X POST https://gateway.production.netfoundry.io/core/v2/app-wans/ --header "Authorization: Bearer ${access_tokenNF}" --header 'Content-Type: application/json' --data '{"selected":false,"endpointAttributes":["@killerCoda"],"serviceAttributes":["@ociAPIGtwySvc"],"postureCheckAttributes":[],"networkId":"'${networkId}'","name":"myPolicy"}'`{{execute}}
+`curl -X POST https://gateway.production.netfoundry.io/core/v2/app-wans/ --header "Authorization: Bearer ${access_tokenNF}" --header 'Content-Type: application/json' --data '{"selected":false,"endpointAttributes":["@killerCoda"],"serviceAttributes":["@ociAPIGtwySvc"],"postureCheckAttributes":[],"networkId":"'${nfNetworkID}'","name":"myPolicy"}'`{{execute}}
 
 In the next step we will run a NodeJS based REST client to consume our Dark API.
 

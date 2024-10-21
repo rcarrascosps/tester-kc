@@ -2,7 +2,7 @@
 
 First let's move into the directory where the rest client is located.
 
-`cd Directory`{{execute}}
+`cd ../../darkClientSample`{{execute}}
 
 Now let's install the required node packages:
 
@@ -13,7 +13,11 @@ Now let's install the required node packages:
 
 The environment variable is ZITI_IDENTITY_FILE.
 
-`export ZITI_IDENTITY_FILE=identity location`{{execute}}
+```
+export ZITI_IDENTITY_FILE=identity location
+export ZITI_HOST="https://"
+ZITI_HOST+=$gateway_host
+```{{execute}}
 
 Now let's check the code.
 

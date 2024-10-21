@@ -61,7 +61,7 @@ First we need to set some variables:
 
 ```
 export nfCredentials=$(echo -n $clientId":"$clientSecret)
-nfCredentials=$(echo -n $nfCredentials | base64)
+nfCredentials=$(echo -n $nfCredentials | base64 -w0)
 export nfSvc="ociAPIGtwySvc"
 export nfIdentityName="killerCoda"
 ```{{execute}}
@@ -90,7 +90,7 @@ Now with the Network ID we can proceed to create the Edger Router.
 ## Create the Edge Router
 
 ```
-edgeRouterID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/edge-routers --header "Content-Type: application/json" --header "Authorization: Bearer ${access_tokenNF}" -d'{"networkId": "'${nfNetworkID}'","attributes": ["#defaultRouters"],"name": "exampleEdgeRouter","linkListener": true}' | jq  -r .id)
+edgeRouterID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/edge-routers --header "Content-Type: application/json" --header "Authorization: Bearer ${access_tokenNF}" -d'{"networkId": "'${nfNetworkID}'","attributes": ["#defaultRouters"],"name": "exampleEdgeRouter","linkListener": true, "selected": false, "enabled": true, "wssListener": false, "tunnerEnabled": true }' | jq  -r .id)
 echo $edgeRouterID
 sleep 3
 ```{{execute}}

@@ -13,7 +13,7 @@ First we need to set the user data that needs the compute instance to start the 
 
 ```
 H='#!/bin/bash'; C="sudo /opt/netfoundry/router-registration "; userdata="${H}"$'\n'"${C}""${edgeRouterRegKey}"; echo "${userdata}"
-userdata=$(echo $userdata | base64)
+userdata=$(echo -n $userdata | base64 -w0)
 echo $userdata
 ```{{execute}}
 
