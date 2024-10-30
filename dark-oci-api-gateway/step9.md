@@ -14,7 +14,7 @@ Now let's install the required node packages:
 The environment variable is ZITI_IDENTITY_FILE.
 
 ```
-export ZITI_IDENTITY_FILE=identity location
+export ZITI_IDENTITY_FILE="/root/darkociapigtwy/etc/deployment/killercoda.json"
 export ZITI_HOST="https://"
 ZITI_HOST+=$gateway_host
 ```{{execute}}

@@ -3,18 +3,19 @@
 First we need to set some variables:
 
 ```
-export nfSvc="ociAPIGtwySvc"
+export nfSvc=ociAPIGtwySvc
 export clientIngressHost=$gateway_host
 export clientIngressPort=443
 export clientEgressHost=$gateway_host
 export clientEgressPort=443
-export nfIdentityName=killerCoda"
+export nfIdentityName=killerCoda
 ```{{execute}}
 
 Now with the required variables, let's create the Service.
 
 ```
-nfServiceID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/services --header "Authorization: Bearer ${access_tokenNF}" --header "Content-Type: application/json" -d '{"networkId":"'${nfNetworkID}'","name":"'${nfSvc}'","encryptionRequired":true,"modelType":"TunnelerToEdgeRouter","model":{"clientIngress":{"host":"'${clientIngressHost}'","port":'${clientIngressPort}'},"edgeRouterHosts":[{"edgeRouterId":"'${edgeRouterID}'","serverEgress":{"protocol":"tcp","host":"'${clientEgressHost}'","port":'${clientEgressPort}'}}]}}' | jq  -r .id)
+nfServiceID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/services --header "Authorization: Bearer ${access_tokenNF}" --header "Content-Type: application/json" -d '{"networkId":"'${nfNetworkID}'", "name":"'${nfSvc}'", "encryptionRequired":true, "modelType":"TunnelerToEndpoint", "model":{ "serverEggress":{"protocol": "tcp","host":"'${clientEgressHost}'", "port":"${clientEgressPort}"},"clientIngress":{ "host":"'${clientIngressHost}'", "port":"${clientIngressPort}"},      "edgeRouterAttributes":[], "bindEndpoints":[], "bindEndpointAttributes":["@exampleEdgeRouter"]}}' | jq  -r .id)
+
 echo $nfServiceID
 ```{{execute}}
 
@@ -42,7 +43,8 @@ Now we'll enroll our identity with the following command:
 
 ```
 cp killercoda.jwt ../sw
-unzip ziti.zip .
+cd ../sw
+unzip ziti.zip
 chmod 755 ziti
 ./ziti edge enroll --jwt killercoda.jwt --out killercoda.json
 ```{{execute}}
