@@ -12,8 +12,8 @@ We need to copy the public key to the user directory.
 First we need to set the user data that needs the compute instance to start the Edge Router:
 
 ```
-H='#!/bin/bash'; C="sudo /opt/netfoundry/router-registration "; userdata="${H}"$'\n'"${C}""${edgeRouterRegKey}"; echo "${userdata}"
-TF_VAR_user_preferences=$(echo -n $userdata | base64 -w0)
+H='#!/bin/bash'; C="sudo /opt/netfoundry/router-registration "; userdata="${H}"$'\n'"${C}""${edgeRouterRegKey}"; echo "${userdata}" > userdata.txt
+export TF_VAR_user_preferences=$(more userdata.txt | base64 -w0)
 echo $TF_VAR_user_preferences
 ```{{execute}}
 

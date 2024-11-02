@@ -18,7 +18,7 @@ With the required variables we can proceed to create the OCI API Gateway:
 
 ```
 gateway_id=$(oci api-gateway gateway create --compartment-id $darkCompartmentId --endpoint-type $endpoint_type --subnet-id $subnet_id --query data.id --raw-output)
-sleep 40
+sleep 360
 echo $gateway_id
 ```{{execute}}
 
@@ -75,7 +75,7 @@ That API resource will be serving at: https://$gateway_host/api/stock
 
 From this Killercoda terminal we cannot access it, since the API Gateway is completely private. Try it out:
 
-`curl -X GT https://$gateway_host/api/stock`{{execute}}
+`curl -X GET https://$gateway_host/api/stock`{{execute}}
 
 As you can see we cannot access it.
 
