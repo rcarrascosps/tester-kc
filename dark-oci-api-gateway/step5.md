@@ -1,6 +1,6 @@
 ## Let's create the credentials in NetFoundry to managed resources using their APIs
 
-Go to your NetFoundry console, and head to the Organization section (right side of the window):
+Go to your NetFoundry console, and head to the Organization section (left side of the window):
 
 ![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/netorg.png?raw=true)
 
@@ -90,7 +90,7 @@ Now with the Network ID we can proceed to create the Edger Router.
 ## Create the Edge Router
 
 ```
-edgeRouterID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/edge-routers --header "Content-Type: application/json" --header "Authorization: Bearer ${access_tokenNF}" -d'{"networkId": "'${nfNetworkID}'","attributes": ["#defaultRouters"],"name": "exampleEdgeRouter","linkListener": true, "selected": false, "enabled": true, "wssListener": false, "tunnerEnabled": true }' | jq  -r .id)
+edgeRouterID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/edge-routers --header "Content-Type: application/json" --header "Authorization: Bearer ${access_tokenNF}" -d'{"networkId": "'${nfNetworkID}'","attributes": ["#defaultRouters"],"name": "exampleEdgeRouter","linkListener": false, "selected": false, "enabled": true, "wssListener": false}' | jq  -r .id)
 echo $edgeRouterID
 sleep 3
 ```{{execute}}
