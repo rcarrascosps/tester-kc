@@ -90,7 +90,7 @@ Now with the Network ID we can proceed to create the Edger Router.
 ## Create the Edge Router
 
 ```
-edgeRouterID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/edge-routers --header "Content-Type: application/json" --header "Authorization: Bearer ${access_tokenNF}" -d'{"networkId": "'${nfNetworkID}'","attributes": ["#defaultRouters"],"name": "exampleEdgeRouter","linkListener": false, "selected": false, "enabled": true, "wssListener": false}' | jq  -r .id)
+edgeRouterID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/edge-routers --header "Content-Type: application/json" --header "Authorization: Bearer ${access_tokenNF}" -d'{"enabled":true,"selected":false,"attributes":[],"linkListener":false,"networkId":"'${nfNetworkID}'","name":"exampleEdgeRouter","wssListener":false,"tunnelerEnabled":true}' | jq  -r .id)
 echo $edgeRouterID
 sleep 3
 ```{{execute}}
