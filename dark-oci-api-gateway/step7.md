@@ -79,6 +79,6 @@ From this Killercoda terminal we cannot access it, since the API Gateway is comp
 
 As you can see we cannot access it.
 
-In the next step you will learn how to create a Service, and Identity and an AppWAN in NetFoundry. That is needed to create the Dark API and then we will
+In the next step you will learn how to create a Service, an Identity and an AppWAN in NetFoundry. That is needed to create the Dark API and then we will
 be in position to consume the service within the Killercoda terminal.
 
