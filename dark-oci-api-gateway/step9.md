@@ -29,7 +29,7 @@ TODO: open the file
 
 And now is time to execute our NodeJS client that will consume the Dark API:
 
-`node callAPI.js`{{execute}}
+`node callMyDarkDarkService.js`{{execute}}
 
 As you could see, we are receiving the response of the API. Ain't that cool?
 

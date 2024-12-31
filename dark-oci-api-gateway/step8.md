@@ -14,7 +14,7 @@ export nfIdentityName=killerCoda
 Now with the required variables, let's create the Service.
 
 ```
-nfServiceID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/services --header "Authorization: Bearer ${access_tokenNF}" --header "Content-Type: application/json" -d '{"networkId":"'${nfNetworkID}'", "name":"'${nfSvc}'", "encryptionRequired":true, "modelType":"TunnelerToEndpoint", "model":{ "serverEggress":{"protocol": "tcp","host":"'${clientEgressHost}'", "port":"${clientEgressPort}"},"clientIngress":{ "host":"'${clientIngressHost}'", "port":"${clientIngressPort}"},      "edgeRouterAttributes":[], "bindEndpoints":[], "bindEndpointAttributes":["@exampleEdgeRouter"]}}' | jq  -r .id)
+nfServiceID=$(curl --silent -X POST https://gateway.production.netfoundry.io/core/v2/services --header "Authorization: Bearer ${access_tokenNF}" --header "Content-Type: application/json" -d '{"networkId":"'${nfNetworkID}'", "name":"'${nfSvc}'", "encryptionRequired":true, "modelType":"TunnelerToEndpoint", "model":{ "serverEgress":{"protocol": "tcp","host":"'${clientEgressHost}'", "port":443,"clientIngress":{ "host":"'${clientIngressHost}'", "port":443, "edgeRouterAttributes":[], "bindEndpoints":[], "bindEndpointAttributes":["@exampleEdgeRouter"]}}' | jq  -r .id)
 
 echo $nfServiceID
 ```{{execute}}
