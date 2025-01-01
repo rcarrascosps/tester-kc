@@ -13,8 +13,7 @@ NPM and Node installation:
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
-nvm install --lts
-nvm alias default 20.18.0
+nvm install 20.18
 echo "Done."
 ```{{exec}}
 
