@@ -29,7 +29,7 @@ Simply click the next box.
 
 ```
 node -v 
-npm -v`
+npm -v
 ```{{exec}}
 
 ## Install Terraform CLI
