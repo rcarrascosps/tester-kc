@@ -27,7 +27,10 @@ We need jq for some expressions we will use to **parse the JSON responses** of s
 
 Simply click the next box.
 
-`node -v npm -v`{{exec}}
+```
+node -v 
+npm -v`
+```{{exec}}
 
 ## Install Terraform CLI
 
