@@ -1,10 +1,16 @@
 # Summary
 
-This completes the scenario for preparing the OCI Tenancy for running the REAL OCI Katacoda Scenarios.
+At this poing you have deployed:
+- A fully private VCN and Subnet in Oracle Cloud
+- A Oracle Cloud Infrastructure API Gateway using the private VCN. And also an API serving on it.
+- A NetFoundry.io Edge Router running in the private subnet
+- All the elements in NetFoundry (Identity, Service, Policy)
+- A NodeJS client to consume the API deployed on the OCI API Gateway
 
-The tenancy now has the *lab-compartment* and a small number of resources. Some policies have been defined to allow services to operate inside the compartment. 
-![](assets/lab-compartment-layout.png)
+If you go to the NetFoundry console and to the Identities section, click on the KillerCoda contextual menu and then click on Visualize, you will see something like this:
 
-You should have local copies on your laptop of the files *config* and *oci_api_key.pem*.  
+![](https://raw.githubusercontent.com/rcarrascosps/tester-kc/main/dark-oci-api-gateway/assets/network.gif?raw=true)
 
-You and your tenancy are all set for the first *real* scenario.
+You may proceed to destroy all the assets that were provisioned in your tenancy.
+
+Thank you and hopefully you've enjoyed executing the scenario.
