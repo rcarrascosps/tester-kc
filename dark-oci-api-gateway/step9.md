@@ -33,7 +33,7 @@ As you can see is a very simple call to a REST Service.
 
 Now is time to execute our NodeJS client that will consume the Dark API:
 
-`node callMyDarkDarkService.js`{{execute}}
+`node callMyDarkService.js`{{execute}}
 
 As you could see, we are receiving the response of the API. Ain't that cool?
 
